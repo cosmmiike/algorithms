@@ -9,10 +9,18 @@ void insertion_sort(vector<int> &v) {
 
   for (int i = 0; i < v.size() - 1; i++) {
     m = &v.at(i);
+<<<<<<< HEAD
     for (int j = i + 1; j < v.size(); j++)
       if (v[j] < *m)
         m = &v.at(j);
     swap(v.at(i), *m);
+=======
+    for (int j = i + 1; j < v.size(); j++) {
+      if (v[j] < *m)
+        m = &v.at(j);
+      swap(v[i], *m);
+    }
+>>>>>>> 1064a712393fbf8b672be951c9a3238b28616bb9
   }
 }
 
