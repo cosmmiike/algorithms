@@ -26,6 +26,19 @@ vector<int> generate_array(int size) {
 }
 
 
+vector<int> read_array(int size) {
+  vector<int> v;
+  int i, e;
+
+  for (i = 0; i < size; i++) {
+    cin >> e;
+    v.push_back(e);
+  }
+
+  return v;
+}
+
+
 void print_array(vector<int> &v) {
   int i;
 
@@ -37,8 +50,9 @@ void print_array(vector<int> &v) {
 
 
 int main() {
-  int i;
-  vector<int> v = generate_array(10);
+  int i, n;
+  cin >> n;
+  vector<int> v = read_array(n);
 
   print_array(v);
   sort_array(v);
