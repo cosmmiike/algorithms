@@ -23,19 +23,22 @@ void counting_sort(vector<int> &v) {
   }
 
   k = 0;
-  for (int i = 0; i < count.size(); i++)
+  for (int i = 0; i < count.size(); i++) {
     for (int j = 0; j < count[i]; j++) {
       v[k++] = i + min;
     }
+  }
 }
 
 
 int find_min(vector<int> &v) {
   int min = 2000000001;
 
-  for (int e: v)
-    if (e < min)
+  for (int e: v) {
+    if (e < min) {
       min = e;
+    }
+  }
 
   return min;
 }
@@ -44,9 +47,11 @@ int find_min(vector<int> &v) {
 int find_max(vector<int> &v) {
   int max = -2000000001;
 
-  for (int e: v)
-    if (e > max)
+  for (int e: v) {
+    if (e > max) {
       max = e;
+    }
+  }
 
   return max;
 }
@@ -68,8 +73,9 @@ vector<int> read_array() {
 
 
 void print_array(vector<int> &v) {
-  for (auto e: v)
+  for (auto e: v) {
     cout << e << " ";
+  }
   cout << endl;
 }
 

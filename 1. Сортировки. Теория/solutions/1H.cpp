@@ -30,11 +30,13 @@ void merge(vector<int> &v, int a, int b, int c) {
   size_l = b - a + 1;
   size_r = c - b;
 
-  for (int i = 0; i < size_l; i++)
+  for (int i = 0; i < size_l; i++) {
     left.push_back(v[a + i]);
+  }
 
-  for (int i = 0; i < size_r; i++)
+  for (int i = 0; i < size_r; i++) {
     right.push_back(v[b + i + 1]);
+  }
 
   count_l = 0;
   count_r = 0;
@@ -80,8 +82,9 @@ vector<int> read_array() {
 
 
 void print_array(vector<int> &v) {
-  for (auto e: v)
+  for (auto e: v) {
     cout << e << " ";
+  }
   cout << endl;
 }
 

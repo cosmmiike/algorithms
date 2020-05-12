@@ -4,10 +4,13 @@ using namespace std;
 
 
 void insertion_sort(vector<int> &v) {
-  for (int i = 1; i < v.size(); i++)
-    for (int j = i; j > 0; j--)
-      if (v[j] < v[j-1])
+  for (int i = 1; i < v.size(); i++) {
+    for (int j = i; j > 0; j--) {
+      if (v[j] < v[j-1]) {
         swap(v[j], v[j-1]);
+      }
+    }
+  }
 }
 
 
@@ -26,8 +29,9 @@ vector<int> read_array() {
 
 
 void print_array(vector<int> &v) {
-  for (auto e: v)
+  for (auto e: v) {
     cout << e << " ";
+  }
   cout << endl;
 }
 

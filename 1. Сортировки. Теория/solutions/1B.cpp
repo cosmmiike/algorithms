@@ -8,9 +8,11 @@ void selection_sort(vector<int> &v) {
 
   for (int i = 0; i < v.size() - 1; i++) {
     m = &v.at(i);
-    for (int j = i + 1; j < v.size(); j++)
-      if (v[j] < *m)
+    for (int j = i + 1; j < v.size(); j++) {
+      if (v[j] < *m) {
         m = &v.at(j);
+      }
+    }
     swap(v.at(i), *m);
   }
 }
@@ -31,8 +33,9 @@ vector<int> read_array() {
 
 
 void print_array(vector<int> &v) {
-  for (auto e: v)
+  for (auto e: v) {
     cout << e << " ";
+  }
   cout << endl;
 }
 
