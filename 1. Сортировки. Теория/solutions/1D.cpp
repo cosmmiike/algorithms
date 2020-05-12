@@ -21,17 +21,6 @@ void participant_sort(vector<participant> &p) {
 }
 
 
-vector<int> generate_array(int size) {
-  vector<int> v;
-
-  srand(unsigned(time(0)));
-  for (int i = 0; i < size; i++)
-    v.push_back(rand() % 101 - 50);
-
-  return v;
-}
-
-
 vector<participant> read_data() {
   vector<participant> participants;
   participant p;

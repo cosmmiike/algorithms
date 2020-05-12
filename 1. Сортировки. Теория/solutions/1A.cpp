@@ -12,17 +12,6 @@ void bubble_sort(vector<int> &v) {
 }
 
 
-vector<int> generate_array(int size) {
-  vector<int> v;
-
-  srand(unsigned(time(0)));
-  for (int i = 0; i < size; i++)
-    v.push_back(rand() % 101 - 50);
-
-  return v;
-}
-
-
 vector<int> read_array() {
   vector<int> v;
   int n, e;
