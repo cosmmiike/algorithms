@@ -4,16 +4,11 @@
 using namespace std;
 
 
-void selection_sort(vector<int> &v) {
-  int *m;
-
-  for (int i = 0; i < v.size() - 1; i++) {
-    m = &v.at(i);
-    for (int j = i + 1; j < v.size(); j++)
-      if (v[j] < *m)
-        m = &v.at(j);
-    swap(v.at(i), *m);
-  }
+void insertion_sort(vector<int> &v) {
+  for (int i = 1; i < v.size(); i++)
+    for (int j = i; j > 0; j--)
+      if (v[j] < v[j-1])
+        swap(v[j], v[j-1]);
 }
 
 
@@ -53,7 +48,7 @@ int main() {
   vector<int> v;
 
   v = read_array();
-  selection_sort(v);
+  insertion_sort(v);
   print_array(v);
 
   return 0;
