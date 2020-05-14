@@ -47,12 +47,25 @@ string make_palindrome(string s) {
 }
 
 
+string read_line(int n) {
+  string line;
+  char letter;
+
+  for(int i = 0; i < n; i++) {
+    cin >> letter;
+    line += letter;
+  }
+
+  return line;
+}
+
+
 int main() {
   int n;
   string s, res;
 
   cin >> n;
-  cin >> s;
+  s = read_line(n);
   res = make_palindrome(s);
 
   cout << res << endl;
