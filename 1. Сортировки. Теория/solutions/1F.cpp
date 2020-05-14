@@ -12,12 +12,13 @@ void counting_sort(string &s) {
     e = 0;
   }
 
-  for (int e: s)
+  for (int e: s) {
     if (int(e) > 47 && int(e) < 58) {
       count[int(e) - 48]++;
     } else if (int(e) > 96 && int(e) < 123) {
       count[int(e) - 87]++;
     }
+  }
 
   k = 0;
   for (int i = 0; i < count.size(); i++) {
